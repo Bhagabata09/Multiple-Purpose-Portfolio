@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jerry - Dual Role Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Jerry's Portfolio - Frontend Developer & MS Dynamics 365 Technical Consultant">
+  <meta property="og:title" content="Jerry's Dual Role Portfolio" />
+  <meta property="og:description" content="Showcasing my work in frontend development and Microsoft Dynamics 365." />
+  <meta property="og:image" content="https://cdn-icons-png.flaticon.com/512/2721/2721291.png" />
+  <meta property="og:url" content="https://your-portfolio-link.com" />
+  <meta name="twitter:card" content="summary_large_image">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    :target::before {
+      content: "";
+      display: block;
+      height: 100px;
+      margin-top: -100px;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0f0f3e;
+      color: white;
+      transition: background 0.5s, color 0.5s;
+    }
+
+    .light-theme {
+      background: white;
+      color: #111;
+    }
+
+    nav {
+      position: fixed;
+      width: 100%;
+      background: #1e1e6a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      z-index: 999;
+    }
+
+    .light-theme nav {
+      background: #ddd;
+    }
+
+    nav .left {
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a,
+    .nav-btn {
+      text-decoration: none;
+      color: inherit;
+      background: #3d3db9;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: background 0.3s;
+      cursor: pointer;
+    }
+
+    nav ul li a:hover,
+    .nav-btn:hover {
+      background: #6d6df7;
+    }
+
+    nav ul li a.active {
+      background: #f9d342;
+      color: black;
+    }
+
+    header,
+    main {
+      padding-top: 100px;
+    }
+
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      color: #f9d342;
+    }
+
+    .hero img {
+      width: 250px;
+      animation: float 3s ease-in-out infinite;
+      margin: 20px 0;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0); }
+    }
+
+    .btn-group {
+      margin-top: 20px;
+    }
+
+    .btn {
+      background: #2929a3;
+      color: white;
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      background-color: #4444ee;
+    }
+
+    .light-theme .btn {
+      background: #ccc;
+      color: black;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .card {
+      background: #1e1e6a;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: left;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .light-theme .card {
+      background: #f0f0f0;
+      color: black;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 60px;
+    }
+
+    .light-theme footer {
+      background: #ccc;
+      color: black;
+    }
+
+    a {
+      color: inherit;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="left">Jerry - Portfolio</div>
+    <ul>
+      <li><a href="#developer">Frontend Dev</a></li>
+      <li><a href="#consultant">MS D365 Consultant</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-btn" onclick="toggleTheme()" aria-label="Toggle Theme">🌓 Toggle Theme</button>
+  </nav>
+
+  <main>
+    <section class="section hero" id="developer">
+      <h1>Jerry - Frontend Developer</h1>
+      <img src="https://cdn-icons-png.flaticon.com/512/2721/2721291.png" alt="Frontend Developer Illustration">
+      <p>Skilled in HTML, CSS, JavaScript, React.js. I build modern, responsive web applications.</p>
+      <div class="btn-group">
+        <a href="BhagaabataCV.pdf" download><button class="btn">Download Resume</button></a>
+        <a href="https://github.com/Bhagabata09"><button class="btn">GitHub</button></a>
+      </div>
+    </section>
+
+    <section class="section hero" id="consultant">
+      <h1>Jerry - Technical Consultant (MS Dynamics 365)</h1>
+      <img src="https://cdn-icons-png.flaticon.com/512/4727/4727471.png" alt="Consultant Illustration">
+      <p>Experienced in X++, Power Platform, D365 F&O implementation and integration projects.</p>
+      <div class="btn-group">
+        <a href="Jerry_Resume.pdf" download><button class="btn">Download Resume</button></a>
+        <a href="#projects"><button class="btn">See Projects</button></a>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <h2>Highlighted Projects</h2>
+      <div class="project-grid">
+        <div class="card">
+          <img src="https://via.placeholder.com/250x150?text=Portfolio+Site" alt="Portfolio project screenshot">
+          <h3>Portfolio Website</h3>
+          <p>Responsive site using HTML, CSS, JS.</p>
+          <a href="https://github.com">View on GitHub</a>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/250x150?text=D365+Module" alt="D365 custom module">
+          <h3>D365 Custom Module</h3>
+          <p>Designed X++ module for vendor management in F&O.</p>
+          <a href="#">Project Details</a>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/250x150?text=CRM+Integration" alt="CRM integration preview">
+          <h3>CRM Integration</h3>
+          <p>Integrated Dynamics CRM with F&O via Power Automate.</p>
+          <a href="#">Project Details</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="bhagabatabrahma2004@gmail.com">bhagabatabrahma2004@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com">linkedin.com/in/jerry</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Jerry's Portfolio. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('light-theme');
+      localStorage.setItem('theme', document.body.classList.contains('light-theme') ? 'light' : 'dark');
+    }
+
+    window.onload = () => {
+      if (localStorage.getItem('theme') === 'light') {
+        document.body.classList.add('light-theme');
+      }
+    };
+
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('section');
+      const navLinks = document.querySelectorAll('nav ul li a');
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 110;
+        if (scrollY >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

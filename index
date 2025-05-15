@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jerry - Developer Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: "Poppins", sans-serif;
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        .light-theme {
+            background-color: white;
+            color: black;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(18, 18, 62);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .light-theme nav {
+            background-color: #e0e0e0;
+        }
+
+        nav ul {
+            display: flex;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        nav ul li a:hover {
+            color: #9c97f1;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding-top: 100px;
+            margin-bottom: 80px;
+        }
+
+        .leftSection {
+            font-size: 2rem;
+            width: 40%;
+        }
+
+        .buttons {
+            margin-top: 40px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background: #1e2167;
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .rightSection img {
+            width: 300px;
+        }
+
+        .purple {
+            color: rgb(145, 81, 205);
+        }
+
+        hr {
+            margin: 60px 84px;
+            border: none;
+            height: 2px;
+            background: #9c97f1;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            list-style: none;
+        }
+
+        .skills-list li {
+            background-color: #1e2167;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .project-card {
+            background-color: #1e2167;
+            padding: 20px;
+            margin: 10px auto;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: #0e0e1a;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .scrollTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #9c97f1;
+            color: black;
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .theme-toggle {
+            background-color: #1e2167;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        .collapsible {
+            cursor: pointer;
+            background-color: #1e2167;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .content {
+            padding: 0 15px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Jerry - Portfolio</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+            </ul>
+            <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstSection" id="home">
+            <div class="leftSection">
+                Hi, My name is <span class="purple">Jerry</span>
+                <div>and I am a passionate</div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <a href="Jerry_Resume.pdf" download><button class="btn">Download Resume</button></a>
+                    <a href="https://github.com/"><button class="btn">Visit GitHub</button></a>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="devloperpng (1).webp" alt="Developer">
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="experience">
+            <div class="section-title">Work Experience</div>
+            <ul class="skills-list">
+                <li>HTML Developer - Pinterest (2010-2012)</li>
+                <li>NodeJS Developer - Facebook (2012-2014)</li>
+                <li>Frontend Developer - Instagram (2014-2015)</li>
+                <li>Web Developer - Twitter (2015-2016)</li>
+                <li>Software Engineer - YouTube (2017-2023)</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section id="skills">
+            <div class="section-title">Skills</div>
+            <button class="collapsible">Show/Hide Skills</button>
+            <div class="content">
+                <ul class="skills-list">
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>React.js</li>
+                    <li>Node.js</li>
+                    <li>Git & GitHub</li>
+                </ul>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="education">
+            <div class="section-title">Education</div>
+            <div class="project-card">
+                <h3>B.Tech in Computer Science</h3>
+                <p>XYZ University, 2018 - 2022</p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="projects">
+            <div class="section-title">Projects</div>
+            <div class="project-card">
+                <h3>Personal Portfolio</h3>
+                <p>A responsive portfolio website built with HTML, CSS, and JavaScript.</p>
+                <a href="https://github.com/">View Project</a>
+            </div>
+        </section>
+    </main>
+
+    <button class="scrollTopBtn" onclick="scrollToTop()">⬆</button>
+
+    <footer>
+        <p>&copy; 2025 Jerry's Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Typing Effect
+        new Typed('#element', {
+            strings: ['Web Developer', 'Frontend Engineer', 'UI/UX Enthusiast', 'Tech Learner'],
+            typeSpeed: 50,
+            backSpeed: 30,
+            loop: true,
+        });
+
+        // Theme Toggle with Local Storage
+        function toggleTheme() {
+            document.body.classList.toggle('light-theme');
+            localStorage.setItem('theme', document.body.classList.contains('light-theme') ? 'light' : 'dark');
+        }
+
+        window.onload = () => {
+            if (localStorage.getItem('theme') === 'light') {
+                document.body.classList.add('light-theme');
+            }
+        };
+
+        // Scroll-to-Top Button
+        const scrollTopBtn = document.querySelector('.scrollTopBtn');
+        window.onscroll = () => {
+            scrollTopBtn.style.display = window.scrollY > 200 ? 'block' : 'none';
+        };
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Collapsible Skills Section
+        const collapsible = document.querySelector('.collapsible');
+        const content = document.querySelector('.content');
+        collapsible.addEventListener('click', () => {
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        });
+    </script>
+</body>
+
+</html>
